@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesssons Git and Git Hub</title>
+</head>
+<body>
+
+	<h2>Commands for git</h2>
+	<p>Жирным выделены команды, жирным курсивом то, что прописывается произвольно</p>
+
+	<ul>
+		<li><strong>git init <i>name_project</i></strong>  //создаем папку</li>
+		<li><strong>cd <i>name_project</i></strong> //переходим в нее</li>
+		<li><strong>git status</strong> //<i></i>смотрим изминения в папке</li>
+		<li><strong>git add <i>index.html</i></strong> //добавит index.html</li>
+		<li><strong>git add .</strong>  //добавит все папки на слежение git -ом </li>
+		<li><strong>git commit -m "<i>initial project</i>"</strong> // сохранить все за чем следим</li>
+		<li><strong>git log</strong> //выведет историю коммитов</li>
+		<li><strong>git log -<i>2</i></strong> //показать последные 2 коммита</li>
+		<li><strong>git commit -am "<i>project v2</i>"</strong> //создать commit и добавить в него все изменения</li>
+		<li><strong>git checkout <i>commit_id</i></strong> //вернет все файлы до состояния коммита с указанным id (bfda2174914e485f5d0a25abde59f55d697701b2)</li>
+		<li><strong>git checkout master</strong> //вернуться к самой свежей версии/коммиту</li>
+		<li><strong>git remote show</strong> //список удаленных репозиториев привязанных к текущему</li>
+	</ul>
+
+	<h3>Регистрация на gitHub</h3>
+	<p>Когда аккаунт зарегистрирован, переходим в gitBush</p>
+
+	<ul>
+		<li><strong>ssh-keygen</strong> //git спросил где хранить ключ ssh (пускай все будет по умолчаю - жмем enter)</li>
+		<li>далее буде запрос пароля, если нужо вводим, если нет - жмем enter</li>
+		<li>получаем ключ, его адресс естьчуть выше в терминале, заходим в эту папку на компьтере, открываем публичный файл (id_rsa.pub) и копируем его</li>
+		<li>заходим на сайт <a href="https://github.com/settings/keys">github</a> в настройки вкладка SSH anв GPG keys</li>
+		<li>жмем NEW SSH key, пишем title и вводим ключ - сохраняем</li>
+		<li>создаем новый репозиторий, пишем описание и жмем создать - видим дальнейшею инструкцию</li>
+		<li><strong>git remote add origin git@github.com:username/nameRepositories.git</strong>(git добавь связь с удаленным репозиторием и сделай его основным по отношению к текущему)</li>
+		<li>теперь введя <strong>git remote show</strong> выдаст - origin</li>
+		<li>вводим <strong>git remote show origin</strong> это первое обращение к github по протоколу SSH, набираем yes и жмем enter (если задавался пароль, то нужнобудет ввести и его)</li>
+		<li><strong>git push</strong> //запросить имя главной ветки</li>
+		<li><strong>git push -u origin master</strong> //вот это уже первый push(загурзка локальным данных на удаленный сервер) на gitHub</li>
+	</ul>
+
+</body>
+</html>
