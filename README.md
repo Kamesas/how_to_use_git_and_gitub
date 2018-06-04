@@ -1,2 +1,28 @@
 # how_to_use_git_and_gitub
-commads for git and short instruction
+
+git init name_project //создаем папку
+cd name_project //переходим в нее
+git status //смотрим изминения в папке
+git add index.html //добавит index.html
+git add . //добавит все папки на слежение git -ом
+git commit -m "initial project" // сохранить все за чем следим
+git log //выведет историю коммитов
+git log -2 //показать последные 2 коммита
+git commit -am "project v2" //создать commit и добавить в него все изменения
+git checkout commit_id //вернет все файлы до состояния коммита с указанным id (bfda2174914e485f5d0a25abde59f55d697701b2)
+git checkout master //вернуться к самой свежей версии/коммиту
+git remote show //список удаленных репозиториев привязанных к текущему
+Регистрация на gitHub
+Когда аккаунт зарегистрирован, переходим в gitBush
+
+ssh-keygen //git спросил где хранить ключ ssh (пускай все будет по умолчаю - жмем enter)
+далее буде запрос пароля, если нужо вводим, если нет - жмем enter
+получаем ключ, его адресс естьчуть выше в терминале, заходим в эту папку на компьтере, открываем публичный файл (id_rsa.pub) и копируем его
+заходим на сайт github в настройки вкладка SSH anв GPG keys
+жмем NEW SSH key, пишем title и вводим ключ - сохраняем
+создаем новый репозиторий, пишем описание и жмем создать - видим дальнейшею инструкцию
+git remote add origin git@github.com:username/nameRepositories.git(git добавь связь с удаленным репозиторием и сделай его основным по отношению к текущему)
+теперь введя git remote show выдаст - origin
+вводим git remote show origin это первое обращение к github по протоколу SSH, набираем yes и жмем enter (если задавался пароль, то нужнобудет ввести и его)
+git push //запросить имя главной ветки
+git push -u origin master //вот это уже первый push(загурзка локальным данных на удаленный сервер) на gitHub
